@@ -668,7 +668,7 @@ export default class MonthView extends Component {
       onKeyDown={this.onViewKeyDown}
       onFocus={this.onFocus}
       onBlur={this.onBlur}
-      dayFormat={'dd'}
+      dayFormat={props.dayFormat}
       renderDay={this.renderDay}
       viewMoment={props.viewMoment}
       onMouseLeave={props.highlightRangeOnMouseMove && this.handleViewMouseLeave}
