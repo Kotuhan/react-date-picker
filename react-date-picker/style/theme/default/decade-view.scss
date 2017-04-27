@@ -1,0 +1,62 @@
+$base: 'react-date-picker__decade-view';
+
+.#{$base}--theme-#{$THEME_NAME} {
+  border: 1px solid gray;
+  padding: 2px;
+
+  .#{$base}-arrow {
+    cursor: pointer;
+    position: relative;
+    fill: $NAV_BAR_ARROW_COLOR;
+    user-select: none;
+    padding: 0px 8px;
+    &--disabled {
+      fill: $NAV_BAR_ARROW_COLOR_DISABLED;
+    }
+    
+    &:hover {
+        border-radius: 3px;
+        background-color: #eeeeee;
+    }
+
+    &:not(.#{$base}-arrow--disabled) {
+      &:active {
+        left: 1px;
+      }
+    }
+  }
+
+  .#{$base}-year {
+      width: 50px;
+      margin: 0px 7px;
+      padding-top: 2px;
+      height: 24px;
+      border-radius: 3px;
+      background-color: #ffffff;
+
+    &--disabled {
+      color: $DAY_COLOR_DISABLED;
+    }
+    &:hover {
+      fill: $NAV_BAR_ARROW_COLOR_HOVER;
+      cursor: pointer;
+      background: #eeeeee;
+      border-radius: 3px;
+    }
+  }
+
+  .#{$base}-year--active {
+    border: 2px solid $ACTIVE_COLOR;
+    padding-top: 0px;
+  }
+
+  .#{$base}-year--value {
+    color: white;
+    background: $ACTIVE_COLOR padding-box;
+    border: 2px solid $ACTIVE_COLOR;
+  }
+
+  .#{$base}-year--active.#{$base}-year--value {
+    background: lighten($ACTIVE_COLOR, 5%) padding-box;
+  }
+}

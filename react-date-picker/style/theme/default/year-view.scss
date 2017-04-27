@@ -1,0 +1,60 @@
+$base: 'react-date-picker__year-view';
+
+.#{$base}--theme-#{$THEME_NAME} {
+  border: 1px solid gray;
+  padding: 2px;
+
+  .#{$base}-month {
+      width: 57px;
+      height: 44px;
+      background-color: #ffffff;
+      cursor: pointer;
+
+      .monthHistoryView {
+          margin-top: 10px;
+          padding-top: 1px;
+          padding-left: 0px;
+          margin-left: 4px;    
+          width: 50px;
+          height: 24px;
+          border-radius: 3px;        
+          font-family: ArialMT;
+          font-size: 13px;
+          padding-left: 2px;
+          line-height: 1.54;
+          text-align: center;
+          color: #222222;
+
+          &--disabled {
+            color: $DAY_COLOR_DISABLED;
+          }
+          
+          &:hover {
+            fill: $NAV_BAR_ARROW_COLOR_HOVER;
+            cursor: pointer;
+            background: #eeeeee;
+            border-radius: 3px;
+          }
+      }
+  }
+
+  .#{$base}-month--active {
+    .monthHistoryView {
+        font-family: Arial-MT;
+        font-size: 13px;
+        font-weight: bold;
+        line-height: 1.54;
+        text-align: center;
+        color: #ffffff;
+    }
+  }
+
+  .#{$base}-month--value .monthHistoryView {
+    color: white;
+    background: $ACTIVE_COLOR padding-box;
+  }
+
+  .#{$base}-month--active.#{$base}-month--value .monthHistoryView {
+    background: lighten($ACTIVE_COLOR, 5%) padding-box;
+  }
+}
