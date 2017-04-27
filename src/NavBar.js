@@ -96,7 +96,14 @@ export default class NavBar extends Component {
 
       <Item
         className={bem('date')}
-        style={{ textAlign: 'center' }}
+        style={{
+              textAlign: 'center', 
+              color: '#222222',
+              fontSize: '13px',
+              fontFamily: 'Arial, "Helvetica Neue", Helvetica, sans-serif',
+              textDecoration: 'bold',
+              fontWeight: 700
+           }}
         onMouseDown={props.historyViewEnabled ? this.toggleHistoryView : null}
       >
         {this.renderNavDate(viewMoment)}
@@ -115,12 +122,12 @@ export default class NavBar extends Component {
     }
 
     const className = bem('history-view')
-    const { viewMoment, theme, minDate, maxDate } = this.p
+    const { viewMoment, theme, minDate, maxDate, arrows } = this.p
 
     const historyViewProps = assignDefined({
       defaultViewDate: viewMoment,
       defaultDate: viewMoment,
-
+      arrows,
       ref: view => { this.historyView = view },
       focusDecadeView: false,
 
@@ -358,7 +365,7 @@ NavBar.defaultProps = {
 
   isDatePickerNavBar: true,
 
-  navDateFormat: 'MMM YYYY',
+  navDateFormat: 'MMMM YYYY',
   enableHistoryView: true,
   onNavClick: (dir, viewMoment) => {},
 

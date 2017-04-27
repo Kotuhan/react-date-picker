@@ -195,7 +195,7 @@ export default class YearView extends Component {
 
   renderMonths(props, months) {
     const nodes = months.map(monthMoment => this.renderMonth(props, monthMoment))
-
+    console.log('nodes', nodes);
     const buckets = times(Math.ceil(nodes.length / 4)).map(i => {
       return nodes.slice(i * 4, (i + 1) * 4)
     })
@@ -260,7 +260,9 @@ export default class YearView extends Component {
       className={className}
       onClick={onClick}
     >
-      {monthText}
+        <div className={'monthHistoryView'}>
+            {monthText}
+        </div>
     </Item>
   }
 

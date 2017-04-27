@@ -55,15 +55,12 @@ export default class Footer extends Component {
       null
 
     let children = [
-      props.centerButtons && SPACER,
-
       todayButton,
       clearButton,
 
       spacer,
 
       okButton,
-      cancelButton,
       props.centerButtons && SPACER
     ]
 
@@ -176,7 +173,7 @@ Footer.defaultProps = {
 
   todayButtonText: 'Today',
   clearButtonText: 'Clear',
-  okButtonText: 'OK',
+  okButtonText: 'Apply',
   cancelButtonText: 'Cancel',
 
   isDatePickerFooter: true,

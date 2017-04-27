@@ -8,12 +8,12 @@ export default function getWeekDayNames(startDay, locale) {
   if (locale) {
     const data = moment.localeData(locale)
 
-    weekDays = data && data._weekdaysShort ?
-      data._weekdaysShort :
+    weekDays = data && data._weekdaysMin ?
+      data._weekdaysMin :
       weekDays
   }
 
-  weekDays = (weekDays || moment.weekdaysShort()).concat()
+  weekDays = (weekDays || moment.weekdaysMin()).concat()
 
   const names = weekDays
   let index = startDay == null ? DEFAULT_WEEK_START_DAY : startDay

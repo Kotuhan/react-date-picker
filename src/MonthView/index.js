@@ -668,7 +668,7 @@ export default class MonthView extends Component {
       onKeyDown={this.onViewKeyDown}
       onFocus={this.onFocus}
       onBlur={this.onBlur}
-      dayFormat={props.dayFormat}
+
       renderDay={this.renderDay}
       viewMoment={props.viewMoment}
       onMouseLeave={props.highlightRangeOnMouseMove && this.handleViewMouseLeave}
@@ -771,6 +771,7 @@ export default class MonthView extends Component {
           maxDate: props.maxDate,
           theme,
           secondary: true,
+          navDateFormat: props.navDateFormat,
           date: props.moment,
           viewMoment: props.viewMoment,
           onViewDateChange: this.onNavViewDateChange,
@@ -781,7 +782,6 @@ export default class MonthView extends Component {
           enableHistoryView: props.enableHistoryView
         }))
       }
-
       return null
     }
 

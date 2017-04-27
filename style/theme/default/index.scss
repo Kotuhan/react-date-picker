@@ -4,12 +4,12 @@ $FIELD_BORDER_COLOR: gray !default;
 $ICON_COLOR: gray !default;
 $ICON_COLOR_HOVER: darken($ICON_COLOR, 20%);
 
-$DAY_SIZE: 40px !default;
+$DAY_SIZE: 30px !default;
 $DAY_COLOR_DISABLED: #D8D8D8 !default;
-$DAY_COLOR_HOVER: #D8EDFF !default;
+$DAY_COLOR_HOVER: #eeeeee !default;
 $VIEW_BORDER_COLOR: gray !default;
 
-$ACTIVE_COLOR: rgb(52, 154, 239) !default;
+$ACTIVE_COLOR: #db3d44 !default;
 $ACTIVE_IN_RANGE_COLOR: lighten($ACTIVE_COLOR, 20%) !default;
 $ACTIVE_IN_HOVER_RANGE_COLOR: lighten($ACTIVE_IN_RANGE_COLOR, 15%) !default;
 $ACTIVE_RANGE_LIMITS_COLOR: lighten($ACTIVE_COLOR, 10%) !default;
@@ -23,7 +23,7 @@ $TODAY_OTHER_MONTH_HIGHLIGHT_COLOR: lighten(magenta, 20%) !default;
 $FOOTER_BUTTON_FONT_SIZE: 0.9em !default;
 $WEEK_NUMBER_COLOR: #B1B1B1 !default;
 $WEEK_NUMBER_FONT_SIZE: 0.8em !default;
-$WEEK_DAY_NAMES_TEXT_TRANSFORM: uppercase !default;
+$WEEK_DAY_NAMES_TEXT_TRANSFORM: none !default;
 
 $NAV_BAR_ARROW_COLOR: darken(gray, 10%) !default;
 $NAV_BAR_ARROW_COLOR_HOVER: lighten(gray, 10%) !default;
@@ -54,6 +54,12 @@ $base: 'react-date-picker__month-view';
 .react-date-picker__month-view--theme-#{$THEME_NAME},
 .react-date-picker__date-field--theme-#{$THEME_NAME},
 .react-date-picker__transition-month-view--theme-#{$THEME_NAME} {
+  width: 264px;
+  height: 306px;
+  border-radius: 3px;
+  background-color: #ffffff;
+  box-shadow: -0.1px 2px 6px 0 rgba(0, 0, 0, 0.2);
+  border: solid 1px #cccccc;
   font-size: 16px;
   font-size: 1em;
 }
@@ -81,6 +87,7 @@ $base: 'react-date-picker__month-view';
   position: relative;
   border: 1px solid $VIEW_BORDER_COLOR;
   overflow: hidden;
+  padding: 10px 5px;
 
   .#{$base}-week-day-names {
     text-transform: $WEEK_DAY_NAMES_TEXT_TRANSFORM;

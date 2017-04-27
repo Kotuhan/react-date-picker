@@ -9,9 +9,14 @@ $base: 'react-date-picker__decade-view';
     position: relative;
     fill: $NAV_BAR_ARROW_COLOR;
     user-select: none;
-
+    padding: 0px 8px;
     &--disabled {
       fill: $NAV_BAR_ARROW_COLOR_DISABLED;
+    }
+    
+    &:hover {
+        border-radius: 3px;
+        background-color: #eeeeee;
     }
 
     &:not(.#{$base}-arrow--disabled) {
@@ -22,17 +27,27 @@ $base: 'react-date-picker__decade-view';
   }
 
   .#{$base}-year {
-    padding: 5px;
-    cursor: pointer;
-    border: 2px solid transparent;
+      width: 50px;
+      margin: 0px 7px;
+      padding-top: 2px;
+      height: 24px;
+      border-radius: 3px;
+      background-color: #ffffff;
 
     &--disabled {
       color: $DAY_COLOR_DISABLED;
+    }
+    &:hover {
+      fill: $NAV_BAR_ARROW_COLOR_HOVER;
+      cursor: pointer;
+      background: #eeeeee;
+      border-radius: 3px;
     }
   }
 
   .#{$base}-year--active {
     border: 2px solid $ACTIVE_COLOR;
+    padding-top: 0px;
   }
 
   .#{$base}-year--value {

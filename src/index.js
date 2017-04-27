@@ -21,8 +21,6 @@ import Calendar from './Calendar'
 import DateFormatInput from './DateFormatInput'
 import DateFormatSpinnerInput from './DateFormatSpinnerInput'
 
-export default MonthView
-
 // allow people to import with other aliases as well
 export const DatePicker = Calendar
 export const DateEditor = DateField

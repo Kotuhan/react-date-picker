@@ -30,19 +30,19 @@ import ON_KEY_DOWN from './MonthView/onKeyDown'
 const getDecadeStartYear = (mom) => {
   const year = mom.get('year')
 
-  return year - year % 10
+  return year - 1;
 }
 
 const getDecadeEndYear = (mom) => {
-  return getDecadeStartYear(mom) + 9
+  return getDecadeStartYear(mom) + 2
 }
 
 const NAV_KEYS = {
   ArrowUp(mom) {
-    return mom.add(-5, 'year')
+    return mom.add(-2, 'year')
   },
   ArrowDown(mom) {
-    return mom.add(5, 'year')
+    return mom.add(2, 'year')
   },
   ArrowLeft(mom) {
     return mom.add(-1, 'year')
@@ -57,10 +57,10 @@ const NAV_KEYS = {
     return mom.set('year', getDecadeEndYear(mom))
   },
   PageUp(mom) {
-    return mom.add(-10, 'year')
+    return mom.add(-3, 'year')
   },
   PageDown(mom) {
-    return mom.add(10, 'year')
+    return mom.add(3, 'year')
   }
 }
 
@@ -332,7 +332,7 @@ export default class DecadeView extends Component {
 
     const start = this.toMoment(`${year}`, 'YYYY').startOf('year')
 
-    return times(10).map(i => {
+    return times(3).map(i => {
       return this.toMoment(start).add(i, 'year')
     })
   }
@@ -420,7 +420,7 @@ export default class DecadeView extends Component {
     const props = this.p
 
     const name = dir == -1 ? 'prev' : 'next'
-    const navMoment = this.toMoment(props.viewMoment).add(dir * 10, 'year')
+    const navMoment = this.toMoment(props.viewMoment).add(dir * 2, 'year')
 
     const disabled = dir == -1 ?
       props.minDateMoment && getDecadeEndYear(navMoment) < getDecadeEndYear(props.minDateMoment) :
@@ -445,7 +445,7 @@ export default class DecadeView extends Component {
       return props.renderNavigation(arrowProps, props)
     }
 
-    return <div {...arrowProps} />
+    return <div style={{ left: (dir === -1) ? '8px' : null, right: (dir !== -1) ? '8px' : null }} {...arrowProps} />
   }
 
   renderYears(props, years) {

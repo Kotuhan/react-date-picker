@@ -2,7 +2,7 @@ import toMoment from '../toMoment'
 
 const CONFIG = {
   // the format in which days should be displayed in month view
-  dayFormat: 'dd',
+  dayFormat: 'D',
 
   // the format in which months should be displayed in year view
   monthFormat: 'MMMM',

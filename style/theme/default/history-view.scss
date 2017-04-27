@@ -1,13 +1,25 @@
 $base: 'react-date-picker__history-view';
 
 .#{$base}--theme-#{$THEME_NAME} {
-  border: 1px solid gray;
-  padding: 2px;
+    width: 248px;
+    height: 242px;
+    border-radius: 3px;
+    background-color: #ffffff;
+    box-shadow: -0.1px 2px 6px 0 rgba(0, 0, 0, 0.2);
+    border: solid 1px #cccccc;
 
   .react-date-picker__year-view--theme-#{$THEME_NAME},
   .react-date-picker__decade-view--theme-#{$THEME_NAME} {
     border: none;
   }
+  
+  .verticalArrow {
+      position: absolute;
+      bottom: 100%;
+      left: 50%;
+      margin-left: -5px;
+  }
+  
 }
 
 .react-date-picker__nav-bar .#{$base}--theme-#{$THEME_NAME} {
