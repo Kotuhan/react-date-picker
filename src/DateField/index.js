@@ -141,9 +141,10 @@ export default class DateField extends Component {
       return undefined
     }
 
-    const clearIcon = props.clearIcon === true ?
-                        CLEAR_ICON :
-                        props.clearIcon
+    const clearIcon = <i className="fa fa-calendar" />
+    // props.clearIcon === true ?
+    // CLEAR_ICON :
+    // props.clearIcon
 
     const clearIconProps = {
       style: {
@@ -183,7 +184,7 @@ export default class DateField extends Component {
     const calendarIconProps = {
       className: 'react-date-field__calendar-icon',
       onMouseDown: this.onCalendarIconMouseDown,
-      children: <div className="react-date-field__calendar-icon-inner" />
+      children: <i className="react-date-field__calendar-icon-inner fa fa-calendar" />
     }
 
     if (renderIcon) {

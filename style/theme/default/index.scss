@@ -244,7 +244,7 @@ $base: 'react-date-picker__month-view';
 
     &--active {
       .#{$base}-day-text {
-        border: 2px solid $ACTIVE_COLOR;
+        border: 2px solid transparent;
       }
     }
   }
