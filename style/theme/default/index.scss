@@ -214,7 +214,7 @@ $base: 'react-date-picker__month-view';
 
       &.#{$base}-day--today-highlight {
         .#{$base}-day-text {
-          color: lighten($TODAY_HIGHLIGHT_COLOR, 40%);
+          
         }
       }
     }

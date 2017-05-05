@@ -355,6 +355,7 @@ export default class DecadeView extends Component {
     const yearsInView = this.getYearsInDecade(props.viewMoment)
 
     const className = join(
+      'history-years-container',
       props.className,
       bem(),
       props.theme && bem(null, `theme-${props.theme}`)
@@ -444,8 +445,10 @@ export default class DecadeView extends Component {
     if (props.renderNavigation) {
       return props.renderNavigation(arrowProps, props)
     }
+    
+    const arrowClassName = 'year-arrow-' + (dir === -1) ? 'left' : 'right';
 
-    return <div style={{ left: (dir === -1) ? '8px' : null, right: (dir !== -1) ? '8px' : null }} {...arrowProps} />
+    return <div {...arrowProps} />
   }
 
   renderYears(props, years) {

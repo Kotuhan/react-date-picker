@@ -132,6 +132,7 @@ export default class YearView extends Component {
     assign(props, dateProps)
 
     const className = join(
+      'history-months-view',
       props.className,
       bem(),
       props.theme && bem(null, `theme-${props.theme}`)

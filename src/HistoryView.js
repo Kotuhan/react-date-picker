@@ -58,7 +58,7 @@ export default class HistoryView extends Component {
     const className = join(
       props.className,
       bem(),
-      props.theme && bem(null, `theme-${props.theme}`)
+      props.theme && bem(null, `theme-${props.theme}`),
     )
 
     const commonProps = assignDefined({}, {
